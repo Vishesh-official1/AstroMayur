@@ -12,6 +12,7 @@ import {
   Asterisk,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HoroscopePage() {
   useEffect(() => {
@@ -57,11 +58,19 @@ export default function HoroscopePage() {
           viewport={{ once: true }}
         >
           <div className="overflow-hidden rounded-xl shadow-xl">
-            <img
+            {/* <img
               src="/images/Horoscope.gif"
               alt="Horoscope Chart"
               className="w-full h-[280px] md:h-[360px] object-cover rounded-xl"
-            />
+            /> */}
+            <div className="relative w-full h-[280px] md:h-[360px] rounded-xl overflow-hidden">
+              <Image
+                src="/images/Horoscope.gif"
+                alt="Horoscope Chart"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
           <div className="mt-5">
             <h2 className="text-3xl font-bold text-[#4b0082] mb-3">

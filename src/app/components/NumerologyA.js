@@ -10,6 +10,7 @@ import {
   Globe2,
   Gem,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function NumerologyPage() {
   return (
@@ -36,11 +37,19 @@ export default function NumerologyPage() {
         {/* Left Section */}
         <div>
           <div className="overflow-hidden rounded-xl shadow-lg">
-            <img
+            {/* <img
               src="/images/Numerology.gif"
               alt="Numerology Symbolism"
               className="w-full h-[280px] md:h-[360px] object-cover rounded-xl"
-            />
+            /> */}
+            <div className="relative w-full h-[280px] md:h-[360px] rounded-xl overflow-hidden">
+              <Image
+                src="/images/Numerology.gif"
+                alt="Numerology Symbolism"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
           <div className="mt-5">
             <h2 className="text-3xl font-bold text-[#4b296b] mb-3">

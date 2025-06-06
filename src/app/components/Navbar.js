@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function AstroKapilNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,10 +24,12 @@ export default function AstroKapilNavbar() {
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <img
+          <Image
             src="/images/logo.png"
             alt="AstroKapil Logo"
-            className="w-10 h-10 md:w-14 md:h-14 object-contain"
+            width={56} // ~14 * 4 = 56px
+            height={56}
+            className="object-contain"
           />
           <span className="text-xl md:text-2xl font-bold text-gray-900">
             Astro
