@@ -124,6 +124,14 @@ export default function ConsultNowPage() {
                 alt={astro.name}
                 className="w-20 h-20 rounded-full object-cover"
               />
+              <div className="relative w-full h-[20px] md:h-[20px] rounded-xl overflow-hidden">
+                <Image
+                  src={astro.image}
+                  alt={astro.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold">{astro.name}</h3>
                 <p className="text-sm">{astro.specialization}</p>
