@@ -37,11 +37,6 @@ export default function NumerologyPage() {
         {/* Left Section */}
         <div>
           <div className="overflow-hidden rounded-xl shadow-lg">
-            {/* <img
-              src="/images/Numerology.gif"
-              alt="Numerology Symbolism"
-              className="w-full h-[280px] md:h-[360px] object-cover rounded-xl"
-            /> */}
             <div className="relative w-full h-[280px] md:h-[360px] rounded-xl overflow-hidden">
               <Image
                 src="/images/Numerology.gif"
@@ -58,8 +53,8 @@ export default function NumerologyPage() {
             <p className="text-gray-800 text-[1rem] leading-relaxed">
               Numerology is an ancient system that explores the mystical
               relationship between numbers and life events. Discover your life
-              path, destiny number, soul urge, and more. It's a fascinating tool
-              for understanding yourself and your place in the universe.
+              path, destiny number, soul urge, and more. It&apos;s a fascinating
+              tool for understanding yourself and your place in the universe.
             </p>
           </div>
         </div>

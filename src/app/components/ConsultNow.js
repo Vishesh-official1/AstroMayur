@@ -1,15 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Phone,
-  Video,
-  MessageCircle,
-  Mail,
-  Star,
-  Calendar,
-  ShieldCheck,
-} from "lucide-react";
+import { Phone, Video, MessageCircle, Mail, Star } from "lucide-react";
+import Image from "next/image";
 import BookingForm from "./BookingForm";
 
 export default function ConsultNowPage() {
@@ -61,11 +54,8 @@ export default function ConsultNowPage() {
           Talk to Expert Astrologers Now
         </h1>
         <p className="text-lg max-w-2xl mx-auto">
-          Get personalized guidance on love, career, health, finance & more.
+          Get personalized guidance on love, career, health, finance &amp; more.
         </p>
-        {/* <button className="mt-6 px-6 py-2 bg-yellow-400 hover:bg-yellow-500 text-white rounded font-semibold shadow">
-          Start Your Consultation
-        </button> */}
       </section>
 
       {/* 2. Modes of Consultation */}
@@ -119,12 +109,7 @@ export default function ConsultNowPage() {
               key={astro.id}
               className="flex items-center bg-white p-4 border shadow rounded gap-4"
             >
-              <img
-                src={astro.image}
-                alt={astro.name}
-                className="w-20 h-20 rounded-full object-cover"
-              />
-              <div className="relative w-full h-[20px] md:h-[20px] rounded-xl overflow-hidden">
+              <div className="w-20 h-20 rounded-full overflow-hidden relative">
                 <Image
                   src={astro.image}
                   alt={astro.name}
@@ -178,7 +163,9 @@ export default function ConsultNowPage() {
               key={topic}
               className="p-4 border rounded shadow hover:bg-yellow-50"
             >
-              <p className="text-center font-medium">{topic}</p>
+              <p className="text-center font-medium">
+                {topic.replace("&", "&amp;")}
+              </p>
             </div>
           ))}
         </div>
@@ -188,12 +175,10 @@ export default function ConsultNowPage() {
       <section className="max-w-3xl mx-auto px-4 py-10 text-center">
         <h2 className="text-2xl font-bold mb-4">Book Your Session</h2>
         <p className="mb-6 text-gray-600">
-          Choose astrologer, time slot & consultation mode.
+          Choose astrologer, time slot &amp; consultation mode.
         </p>
         <BookingForm />
       </section>
-
-      {/* 6. Pricing */}
     </div>
   );
 }

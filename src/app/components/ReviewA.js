@@ -72,7 +72,9 @@ const TestimonialSection = () => {
               {getInitials(name)}
             </div>
 
-            <p className="text-xl italic text-[#7a542d] mb-4">"{feedback}"</p>
+            <p className="text-xl italic text-[#7a542d] mb-4">
+              &quot;{feedback}&quot;
+            </p>
             <p className="text-lg font-semibold text-[#3f220f]">- {name}</p>
             <p className="text-sm uppercase tracking-widest text-[#7a542d] mt-1">
               {service}
